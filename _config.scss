@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap');
+$font-stack: 'Poppins', sans-serif;
+$light-color: #f4f4f4;
+$primary-color: #0b65f5;
+// $primary-color: #51e4e4;
+$secondary-color: #f5982e;
+
+//Set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color) > 65) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+@mixin set-bg($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
