@@ -1,6 +1,5 @@
 @import 'config';
-@import 'utilities';
-@import 'buttons';
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +20,7 @@ a {
   text-decoration: none;
 }
 
-.showcase {
+.hero {
   @include set-bg($primary-color);
   height: 600px;
 
@@ -31,7 +30,7 @@ a {
     align-items: center;
     justify-content: space-between;
 
-    .logo-ranger {
+    .logo {
       color: (lighten($color: $secondary-color, $amount: 7%));
     }
 
@@ -53,7 +52,7 @@ a {
     }
   }
 
-  .showcase-content {
+  .hero-content {
     height: 100%;
     display: flex;
     align-items: center;
@@ -66,3 +65,7 @@ a {
     }
   }
 }
+
+@import 'utilities';
+@import 'buttons';
+@import 'mobile';

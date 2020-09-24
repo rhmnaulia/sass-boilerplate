@@ -1,0 +1,13 @@
+add@media (max-width: 700px) {
+  .hero {
+    height: 400px;
+
+    &-content {
+      text-align: center;
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
